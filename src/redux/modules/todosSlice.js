@@ -9,7 +9,7 @@ export const __addToDo = createAsyncThunk(
   '__addToDo',
   async (payload, thunkAPI) => {
     await waitTwoSeconds();
-    return thunkAPI.dispatch(addTodo(payload));
+    thunkAPI.dispatch(addTodo(payload));
   }
 );
 
@@ -17,7 +17,7 @@ export const __deleteTodo = createAsyncThunk(
   '__deleteToDo',
   async (payload, thunkAPI) => {
     await waitTwoSeconds();
-    return thunkAPI.dispatch(deleteTodo(payload));
+    thunkAPI.dispatch(deleteTodo(payload));
   }
 );
 
